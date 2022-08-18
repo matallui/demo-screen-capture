@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "build:plugin": "EXPO_NONINTERACTIVE=1 expo-module build plugin",
+    "clean:plugin": "expo-module clean plugin",
+    "postinstall": "yarn run build:plugin",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -25,6 +28,7 @@
     "@babel/core": "^7.12.9",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
+    "expo-module-scripts": "^2.1.0",
     "tailwindcss": "^3.1.8",
     "typescript": "~4.3.5"
   },
