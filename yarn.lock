@@ -5602,6 +5602,11 @@ react-native-gradle-plugin@^0.0.7:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz#96602f909745239deab7b589443f14fce5da2056"
   integrity sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g==
 
+react-native-is-screen-captured-ios@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-is-screen-captured-ios/-/react-native-is-screen-captured-ios-0.1.0.tgz#c44024aa7de9d8a1a9c8e43f74769ca28eaeb0ea"
+  integrity sha512-jVSQ/qMlthL4p3GKlhFI7myzvsYPLkXjkY+N8/WocZXOvyaG7RUUKK1WZ3tT9x4IQfzqtKQstIdUFzr8zWaKKA==
+
 react-native-web@~0.18.7:
   version "0.18.7"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.18.7.tgz#2b688502b3d389c49346fa3d8c9a20cfd52f507f"
