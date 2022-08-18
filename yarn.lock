@@ -1473,6 +1473,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@notifee/react-native@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@notifee/react-native/-/react-native-5.6.0.tgz#a34998c98ad93482e4452b4d2cfb405b4f5f59ce"
+  integrity sha512-MBV863fQx5qFDXKQ+3i9EkVeFAGVERmOOpk4gADx17WpZJSLNhVCnXRA1CEP0bJ4B39G6Z2SiadRl19E5GeWiQ==
+
 "@npmcli/fs@^1.0.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-1.1.1.tgz#72f719fe935e687c56a4faecf3c03d06ba593257"
