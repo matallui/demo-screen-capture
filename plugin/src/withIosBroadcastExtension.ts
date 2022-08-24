@@ -28,7 +28,7 @@ const withBroadcastExtensionHandler: ConfigPlugin = (config) => {
       );
       await fs.promises.mkdir(extensionRootPath, { recursive: true });
       await fs.promises.copyFile(
-        path.join(__dirname, 'static', 'SampleHandler.swift'),
+        path.join(__dirname, 'static', 'SampleHandlerTemplate.swift'),
         path.join(extensionRootPath, 'SampleHandler.swift')
       );
       return config;
@@ -68,7 +68,7 @@ const withBroadcastExtensionPlist: ConfigPlugin = (config) => {
 };
 
 const withBroadcastExtensionXcodeTarget: ConfigPlugin = (config) => {
-  return withXcodeProject(config, (config) => {
+  return withXcodeProject(config, async (config) => {
     const appName = config.modRequest.projectName!;
     const extensionName = 'broadcast';
     const extensionBundleIdentifier = `${config.ios!
@@ -76,7 +76,7 @@ const withBroadcastExtensionXcodeTarget: ConfigPlugin = (config) => {
     const currentProjectVersion = config.ios!.buildNumber || '1';
     const marketingVersion = config.version!;
 
-    addBroadcastExtensionXcodeTarget(config.modResults, {
+    await addBroadcastExtensionXcodeTarget(config.modResults, {
       appName,
       extensionName,
       extensionBundleIdentifier,
@@ -96,7 +96,7 @@ type AddXcodeTargetParams = {
   marketingVersion: string;
 };
 
-const addBroadcastExtensionXcodeTarget = (
+const addBroadcastExtensionXcodeTarget = async (
   proj: XcodeProject,
   {
     appName,
@@ -358,7 +358,7 @@ const addBuildPhases = (
   const { uuid: sourcesBuildPhaseUuid } = proj.addBuildPhase(
     [`SampleHandler.swift`],
     'PBXSourcesBuildPhase',
-    groupName,
+    'Sources',
     targetUuid,
     'app_extension',
     buildPath
@@ -380,7 +380,7 @@ const addBuildPhases = (
   const { uuid: frameworksBuildPhaseUuid } = proj.addBuildPhase(
     [frameworkPath],
     'PBXFrameworksBuildPhase',
-    groupName,
+    'Frameworks',
     targetUuid,
     'app_extension',
     buildPath
@@ -391,7 +391,7 @@ const addBuildPhases = (
   const { uuid: resourcesBuildPhaseUuid } = proj.addBuildPhase(
     [],
     'PBXResourcesBuildPhase',
-    groupName,
+    'Resources',
     targetUuid,
     'app_extension',
     buildPath
