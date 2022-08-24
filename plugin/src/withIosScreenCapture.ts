@@ -22,7 +22,7 @@ const withIosScreenCapture: ConfigPlugin = (config) => {
 
 const withAppEntitlements: ConfigPlugin = (config) => {
   config = withEntitlementsPlist(config, (config) => {
-    const appGroupIdentifier = `${config.ios!.bundleIdentifier!}.appgroup`;
+    const appGroupIdentifier = `group.${config.ios!.bundleIdentifier!}.appgroup`;
     config.modResults['com.apple.security.application-groups'] = [
       appGroupIdentifier,
     ];
@@ -35,7 +35,7 @@ const withBroadcastEntitlements: ConfigPlugin = (config) => {
   return withDangerousMod(config, [
     'ios',
     async (config) => {
-      const appGroupIdentifier = `${config.ios!.bundleIdentifier!}.appgroup`;
+      const appGroupIdentifier = `group.${config.ios!.bundleIdentifier!}.appgroup`;
       const extensionRootPath = path.join(
         config.modRequest.platformProjectRoot,
         'broadcast'
@@ -64,7 +64,7 @@ const withBroadcastEntitlements: ConfigPlugin = (config) => {
 
 const withInfoPlistRTC: ConfigPlugin = (config) => {
   return withInfoPlist(config, (config) => {
-    const appGroupIdentifier = `${config.ios!.bundleIdentifier!}.appgroup`;
+    const appGroupIdentifier = `group.${config.ios!.bundleIdentifier!}.appgroup`;
     const extensionBundleIdentifier = `${config.ios!
       .bundleIdentifier!}.broadcast`;
 
@@ -82,7 +82,7 @@ const withInfoPlistRTC: ConfigPlugin = (config) => {
 
 const withBroadcastSources: ConfigPlugin = (config) => {
   return withXcodeProject(config, async (config) => {
-    const appGroupIdentifier = `${config.ios!.bundleIdentifier!}.appgroup`;
+    const appGroupIdentifier = `group.${config.ios!.bundleIdentifier!}.appgroup`;
     const extensionRootPath = path.join(
       config.modRequest.platformProjectRoot,
       'broadcast'
