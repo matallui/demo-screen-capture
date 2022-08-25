@@ -32,35 +32,41 @@ const withAppEntitlements: ConfigPlugin = (config) => {
 };
 
 const withBroadcastEntitlements: ConfigPlugin = (config) => {
-  return withDangerousMod(config, [
-    'ios',
-    async (config) => {
-      const appGroupIdentifier = `group.${config.ios!
-        .bundleIdentifier!}.appgroup`;
-      const extensionRootPath = path.join(
-        config.modRequest.platformProjectRoot,
-        'broadcast'
-      );
-      const entitlementsPath = path.join(
-        extensionRootPath,
-        'broadcast.entitlements'
-      );
+  return withXcodeProject(config, async (config) => {
+    const appGroupIdentifier = `group.${config.ios!
+      .bundleIdentifier!}.appgroup`;
+    const extensionRootPath = path.join(
+      config.modRequest.platformProjectRoot,
+      'broadcast'
+    );
+    const entitlementsPath = path.join(
+      extensionRootPath,
+      'broadcast.entitlements'
+    );
 
-      const extensionEntitlements: InfoPlist = {
-        'com.apple.security.application-groups': [appGroupIdentifier],
-      };
+    const extensionEntitlements: InfoPlist = {
+      'com.apple.security.application-groups': [appGroupIdentifier],
+    };
 
-      await fs.promises.mkdir(path.dirname(entitlementsPath), {
-        recursive: true,
-      });
-      await fs.promises.writeFile(
-        entitlementsPath,
-        plist.build(extensionEntitlements)
-      );
+    await fs.promises.mkdir(path.dirname(entitlementsPath), {
+      recursive: true,
+    });
+    await fs.promises.writeFile(
+      entitlementsPath,
+      plist.build(extensionEntitlements)
+    );
 
-      return config;
-    },
-  ]);
+    const proj = config.modResults;
+    const targetUuid = proj.findTargetKey('broadcast');
+    const groupUuid = proj.findPBXGroupKey({ name: 'broadcast' });
+
+    proj.addFile('broadcast.entitlements', groupUuid, {
+      target: targetUuid,
+      lastKnownFileType: 'text.plist.entitlements',
+    });
+
+    return config;
+  });
 };
 
 const withInfoPlistRTC: ConfigPlugin = (config) => {
