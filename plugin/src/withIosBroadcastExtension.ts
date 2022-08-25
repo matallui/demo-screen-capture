@@ -282,7 +282,7 @@ const addToPbxNativeTargetSection = (
     pbxNativeTarget: {
       isa: 'PBXNativeTarget',
       buildConfigurationList: xCConfigurationList.uuid,
-      buildPhases: [], // TODO: add needed build phases
+      buildPhases: [],
       buildRules: [],
       dependencies: [],
       name: extensionName,
