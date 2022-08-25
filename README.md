@@ -28,3 +28,6 @@ Since screen capture requires significant native changes (mostly on iOS side), t
  - [Android Setup](https://github.com/react-native-webrtc/react-native-webrtc/blob/16cff1523da457dbcc27bb0744ee2bad3a987c41/Documentation/AndroidInstallation.md#screen-capture-support---android-10)
  - [iOS Setup](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ios-sdk/#screen-sharing-integration)
  - https://github.com/react-native-webrtc/react-native-webrtc/issues/1175
+ - https://github.com/andrew-levy/react-native-safari-extension
+ - https://github.com/bndkt/react-native-app-clip
+ - https://github.com/irohitb/screenshare-webrtc
