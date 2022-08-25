@@ -159,19 +159,6 @@ const addXCConfigurationList = (
     appName,
   }: AddXcodeTargetParams
 ) => {
-  proj.updateBuildProperty(
-    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES',
-    'YES',
-    'Debug',
-    proj.getFirstTarget().firstTarget.name
-  );
-  proj.updateBuildProperty(
-    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES',
-    'YES',
-    'Release',
-    proj.getFirstTarget().firstTarget.name
-  );
-
   const commonBuildSettings: any = {
     CLANG_ANALYZER_NONNULL: 'YES',
     CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION: 'YES_AGGRESSIVE',
@@ -233,6 +220,17 @@ const addXCConfigurationList = (
   );
 
   console.log(`Added XCConfigurationList ${xCConfigurationList.uuid}`);
+
+  // update other build properties
+  proj.updateBuildProperty(
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES',
+    'YES',
+    null,
+    proj.getFirstTarget().firstTarget.name
+  );
+
+  proj.updateBuildProperty('IPHONEOS_DEPLOYMENT_TARGET', '14.0');
+
 
   return xCConfigurationList;
 };

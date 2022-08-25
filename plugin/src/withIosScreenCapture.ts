@@ -48,6 +48,7 @@ const withBroadcastEntitlements: ConfigPlugin = (config) => {
       'com.apple.security.application-groups': [appGroupIdentifier],
     };
 
+    // create file
     await fs.promises.mkdir(path.dirname(entitlementsPath), {
       recursive: true,
     });
@@ -56,6 +57,7 @@ const withBroadcastEntitlements: ConfigPlugin = (config) => {
       plist.build(extensionEntitlements)
     );
 
+    // add file to extension group
     const proj = config.modResults;
     const targetUuid = proj.findTargetKey('broadcast');
     const groupUuid = proj.findPBXGroupKey({ name: 'broadcast' });
@@ -64,6 +66,14 @@ const withBroadcastEntitlements: ConfigPlugin = (config) => {
       target: targetUuid,
       lastKnownFileType: 'text.plist.entitlements',
     });
+
+    // update build properties
+    proj.updateBuildProperty(
+      'CODE_SIGN_ENTITLEMENTS',
+      'broadcast/broadcast.entitlements',
+      null,
+      'broadcast'
+    );
 
     return config;
   });
