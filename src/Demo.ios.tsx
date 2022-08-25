@@ -40,7 +40,7 @@ const Demo: React.FC<Props> = () => {
         {stream && (
           <RTCView
             // @ts-ignore
-            className="flex-1 bg-green-400"
+            className="flex-1 bg-green-100"
             objectFit="contain"
             streamURL={stream.toURL()}
           />

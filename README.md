@@ -7,14 +7,17 @@ Since screen capture requires significant native changes (mostly on iOS side), t
 ## State
 
  - Android: ✅
- - iOS: ❌ (WIP)
+ - iOS: ✅
+
+ For iOS you currently get a red screen instead of the expected hall-of-mirrors.
+ This is due to an issue that has now been reported [here](https://github.com/jitsi/jitsi-meet/issues/12040).
 
 ## Build and Run the App
 
  - Clone this repo and cd into it
  - Install dependencies (this will also build plugins): `yarn`
- - Generate native projects: `npx expo prebuild -p android` (only Android for now)
- - Run native project: `npx expo run:android -d` (only Android for now)
+ - Generate native projects: `npx expo prebuild`
+ - Run native project: `npx expo run:android -d` (or `ios`)
 
 ## Notes
 
