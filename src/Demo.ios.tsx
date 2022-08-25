@@ -16,32 +16,22 @@ const Demo: React.FC<Props> = () => {
   const isCaptured = useIsCaptured();
 
   useEffect(() => {
-    if (!isCaptured) {
+    const startStream = async () => {
+      const _stream = (await mediaDevices.getDisplayMedia()) as MediaStream;
+      console.log(_stream);
+      setStream(_stream);
+    };
+
+    if (isCaptured) {
+      startStream();
+    } else {
       setStream(undefined);
     }
   }, [isCaptured, setStream]);
 
-  const showBroadcast = async () => {
+  const showScreenRecordPicker = async () => {
     const handle = findNodeHandle(screenCapturePickerViewRef.current);
-    return NativeModules.ScreenCapturePickerViewManager.show(handle);
-  };
-
-  const start = async () => {
-    try {
-      await showBroadcast();
-      const _stream = (await mediaDevices.getDisplayMedia()) as MediaStream;
-      setStream(_stream);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const stop = async () => {
-    try {
-      await showBroadcast();
-    } catch (err) {
-      console.log(err);
-    }
+    NativeModules.ScreenCapturePickerViewManager.show(handle);
   };
 
   return (
@@ -50,7 +40,7 @@ const Demo: React.FC<Props> = () => {
         {stream && (
           <RTCView
             // @ts-ignore
-            className="flex-1"
+            className="flex-1 bg-green-400"
             objectFit="contain"
             streamURL={stream.toURL()}
           />
@@ -59,7 +49,7 @@ const Demo: React.FC<Props> = () => {
       </View>
       <View className="my-4">
         <Button
-          onPress={() => (stream ? stop() : start())}
+          onPress={showScreenRecordPicker}
           title={stream ? 'Stop' : 'Start'}
         />
       </View>
