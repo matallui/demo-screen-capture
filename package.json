@@ -19,7 +19,7 @@
     "nativewind": "^2.0.0-next.58",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-native": "0.69.4",
+    "react-native": "0.69.6",
     "react-native-is-screen-captured-ios": "^0.1.0",
     "react-native-web": "~0.18.7",
     "react-native-webrtc": "^1.100.1"
