@@ -22,7 +22,7 @@
     "react-native": "0.70.6",
     "react-native-is-screen-captured-ios": "^0.1.0",
     "react-native-web": "~0.18.7",
-    "react-native-webrtc": "^1.100.1"
+    "react-native-webrtc": "^106.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

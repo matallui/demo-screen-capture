@@ -3579,19 +3579,19 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
+debug@4.3.4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+  dependencies:
+    ms "2.1.2"
+
 debug@^3.1.0, debug@^3.2.7:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
   dependencies:
     ms "^2.1.1"
-
-debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
-  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
-  dependencies:
-    ms "2.1.2"
 
 decamelize@^1.2.0:
   version "1.2.0"
@@ -7837,13 +7837,14 @@ react-native-web@~0.18.7:
     postcss-value-parser "^4.2.0"
     styleq "^0.1.2"
 
-react-native-webrtc@^1.100.1:
-  version "1.106.1"
-  resolved "https://registry.yarnpkg.com/react-native-webrtc/-/react-native-webrtc-1.106.1.tgz#31b18e8780bb927934ebddb5e03a8168cc6edf3c"
-  integrity sha512-955gqWFdISARz9D4hmnPzKQwpaU+AGqUbU+vBjzLCozUseSJ69tTQg2cShyPCBH6A1rwJQE+mrdjcpkeGbx3pQ==
+react-native-webrtc@^106.0.0:
+  version "106.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-webrtc/-/react-native-webrtc-106.0.1.tgz#d858b96129a27e9866346948ca0379fcc3b040b1"
+  integrity sha512-0l911lDIqj7jKMvxwQEF6mQt6CMnmOZjgwyifNT28w3XY4p+0Tm/mg5S0UqjbFzcUWeI5w2q/Xk7zn0mcbEhPg==
   dependencies:
     adm-zip "0.5.9"
     base64-js "1.5.1"
+    debug "4.3.4"
     event-target-shim "6.0.2"
     tar "6.1.11"
 
