@@ -12,7 +12,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@config-plugins/react-native-webrtc": "^4.0.0",
+    "@config-plugins/react-native-webrtc": "^5.0.0",
     "@notifee/react-native": "^5.6.0",
     "expo": "~46.0.8",
     "expo-status-bar": "~1.4.0",
