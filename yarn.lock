@@ -1098,12 +1098,12 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@config-plugins/react-native-webrtc@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-webrtc/-/react-native-webrtc-4.0.0.tgz#55752e6393ba602687598a6dcbeded5f30789251"
-  integrity sha512-iIXCLmLy5eViYeKiRt6W2ZyglorFedlbojtzC9FsdZY5hcZRrLSfQYAQI1yo7AAT0hibjJihjIJTkulKvmyQCQ==
+"@config-plugins/react-native-webrtc@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-webrtc/-/react-native-webrtc-5.0.0.tgz#399bd875efce5330f8426d5961aa5ce398de726f"
+  integrity sha512-QT/K3I7HZMyDag8SThxP2ok6BXH0PuzxGUxiGGZ/eS3hnkMEDbmzpxGSF4G4d7jJLI7AaOgHVq3S5VB3tGY85Q==
   dependencies:
-    expo-build-properties "^0.3.0"
+    expo-build-properties "~0.4.0"
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
@@ -4258,12 +4258,11 @@ expo-asset@~8.6.1:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
-expo-build-properties@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.3.0.tgz#807882710318a4e68fb3b4f6ae6b5882db071937"
-  integrity sha512-W2IAJ9p4e7kdq231cFe3dg+Vv2uQx/qXI31XwjereHaXZZsHnpnImOEtLwq83EBlifmoNllIBxAe528kweevsw==
+expo-build-properties@~0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.4.1.tgz#f2511d281898657b225710051860d71c63b9ad5e"
+  integrity sha512-Y492KoSfb8Jj5y8qA+J0Wu0HjuCmJuqCB7fxOAxqNDS5V8JJNUU9106ESDnlQ7xyxkjMlGmVZN1/oRUoC0zBJg==
   dependencies:
-    "@expo/config-plugins" "~5.0.0"
     ajv "^8.11.0"
     semver "^7.3.5"
 
