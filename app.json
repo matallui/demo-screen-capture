@@ -30,7 +30,16 @@
     "plugins": [
       "@config-plugins/react-native-webrtc",
       "@notifee/react-native",
-      "./app.plugin"
+      "./app.plugin",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+          }
+        }
+      ]
     ]
   }
 }
