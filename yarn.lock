@@ -1201,12 +1201,12 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@config-plugins/react-native-webrtc@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-webrtc/-/react-native-webrtc-5.0.0.tgz#399bd875efce5330f8426d5961aa5ce398de726f"
-  integrity sha512-QT/K3I7HZMyDag8SThxP2ok6BXH0PuzxGUxiGGZ/eS3hnkMEDbmzpxGSF4G4d7jJLI7AaOgHVq3S5VB3tGY85Q==
+"@config-plugins/react-native-webrtc@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-webrtc/-/react-native-webrtc-6.0.0.tgz#bfa7dbd5c982143063db69389399198b0f2581ed"
+  integrity sha512-gZmP/uRBflwT4NJMP8UY1nVemrRPhMkzSKOveuIA325fYlnrNE2vM14Y3ONvJBOxYVOZ4D10gnbYrsofZJL4UQ==
   dependencies:
-    expo-build-properties "~0.4.0"
+    expo-build-properties "~0.5.1"
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.2.0"
@@ -4261,15 +4261,7 @@ expo-asset@~8.7.0:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
-expo-build-properties@~0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.4.1.tgz#f2511d281898657b225710051860d71c63b9ad5e"
-  integrity sha512-Y492KoSfb8Jj5y8qA+J0Wu0HjuCmJuqCB7fxOAxqNDS5V8JJNUU9106ESDnlQ7xyxkjMlGmVZN1/oRUoC0zBJg==
-  dependencies:
-    ajv "^8.11.0"
-    semver "^7.3.5"
-
-expo-build-properties@~0.5.0:
+expo-build-properties@~0.5.0, expo-build-properties@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/expo-build-properties/-/expo-build-properties-0.5.1.tgz#6221f6b93f4d21c16c94cb781da1ec5ba21d00ea"
   integrity sha512-wa02F4dmQTCxZ7rEBtaZCU0rCzpoUYSKF51cKCRT8ECEEkHe/k78VN8wI9fj03L7cIqJA5CJb2ZYydxKTbRHxA==
