@@ -7472,9 +7472,9 @@ react-native-web@~0.18.7:
     styleq "^0.1.2"
 
 react-native-webrtc@^106.0.0:
-  version "106.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-webrtc/-/react-native-webrtc-106.0.1.tgz#d858b96129a27e9866346948ca0379fcc3b040b1"
-  integrity sha512-0l911lDIqj7jKMvxwQEF6mQt6CMnmOZjgwyifNT28w3XY4p+0Tm/mg5S0UqjbFzcUWeI5w2q/Xk7zn0mcbEhPg==
+  version "106.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-webrtc/-/react-native-webrtc-106.0.7.tgz#a00ec9828ecb9910ac525474c59b292eded7408f"
+  integrity sha512-Ro/NoxN/9/b/bcZErM+oVbWC8ZCplp00sHWDOOh289KDkAkFYZdyFZAKsgJQoMj5rOJZVzIIxuJW91ox+0k92w==
   dependencies:
     adm-zip "0.5.9"
     base64-js "1.5.1"
