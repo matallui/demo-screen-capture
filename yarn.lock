@@ -3547,14 +3547,6 @@ cosmiconfig@^5.0.5, cosmiconfig@^5.1.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-create-react-class@^15.7.0:
-  version "15.7.0"
-  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.7.0.tgz#7499d7ca2e69bb51d13faf59bd04f0c65a1d6c1e"
-  integrity sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==
-  dependencies:
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 cross-fetch@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
@@ -6008,7 +6000,7 @@ logkitty@^0.7.1:
     dayjs "^1.8.15"
     yargs "^15.1.0"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -7458,13 +7450,12 @@ react-native-is-screen-captured-ios@^0.1.0:
   resolved "https://registry.yarnpkg.com/react-native-is-screen-captured-ios/-/react-native-is-screen-captured-ios-0.1.0.tgz#c44024aa7de9d8a1a9c8e43f74769ca28eaeb0ea"
   integrity sha512-jVSQ/qMlthL4p3GKlhFI7myzvsYPLkXjkY+N8/WocZXOvyaG7RUUKK1WZ3tT9x4IQfzqtKQstIdUFzr8zWaKKA==
 
-react-native-web@~0.18.7:
-  version "0.18.10"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.18.10.tgz#fb4db047f4be7f9cf35f37ec8d52f7d1c450600f"
-  integrity sha512-YV2gtZa1n7ulTGp+HcxH+KsAtaDPBI/dKd9oOQS31zyFHURjObLUVkKnGjkmlYAUReWfvmlU64GzyNwoZF9/tA==
+react-native-web@~0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.19.0.tgz#b40c3b7353967372e964d3d2f371b1ce6ced55e2"
+  integrity sha512-KT3QinirATviotqB8aX4GIvaLzA5WeGQgdqxmKTVBf9msRsrfmFDRUqZrIkYtXRrLo/GjBUZCXKTulSSV3wuog==
   dependencies:
     "@babel/runtime" "^7.18.6"
-    create-react-class "^15.7.0"
     fbjs "^3.0.4"
     inline-style-prefixer "^6.0.1"
     normalize-css-color "^1.0.2"
