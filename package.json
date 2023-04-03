@@ -20,7 +20,7 @@
     "nativewind": "^2.0.11",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-native": "0.70.5",
+    "react-native": "0.71.6",
     "react-native-is-screen-captured-ios": "^0.1.0",
     "react-native-web": "~0.18.7",
     "react-native-webrtc": "^106.0.0"
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@types/react": "~18.0.24",
-    "@types/react-native": "~0.70.6",
+    "@types/react-native": "~0.71.0",
     "copyfiles": "^2.4.1",
     "expo-module-scripts": "^3.0.0",
     "tailwindcss": "^3.1.8",
